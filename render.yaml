@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: agenda-escolar
+    runtime: java
+    plan: free
+    buildCommand: chmod +x mvnw && ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
